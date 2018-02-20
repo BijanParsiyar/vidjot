@@ -24,11 +24,7 @@ const db = require('./config/database');
 // Map global promise = get rid of warning
 mongoose.Promise = global.Promise;
 // Connect to mongoose in local host
-mongoose.connect(db.mongoURI, {
-  useMongoClient: true
-})
-.then(() => console.log('MongoDB Connected...'))
-.catch(err => console.log(err));
+mongoose.connect(db.mongoURI);
 
   
 
