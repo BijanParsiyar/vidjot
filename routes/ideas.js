@@ -30,9 +30,9 @@ router.get('/edit/:id', ensureAuthenticated,  (req, res) => {
     _id: req.params.id
   })
     .then(idea => {
-      if(idea.user != req.user.id){
+      if(idea.user != req.user.id){ // the idea user id which is in each idea in our db, doesnt match /    //req user idea which we have because of passport middleware
         req.flash('error_msg', 'Not Authorized');
-        res.redirect('/ideas');
+        res.redirect('/ideas'); // going here because the user has to be logged in to even access thepage
       } else {
         res.render('ideas/edit', {
           idea: idea
