@@ -24,7 +24,7 @@ const db = require('./config/database');
 // Map global promise = get rid of warning
 mongoose.Promise = global.Promise;
 // Connect to mongoose in local host
-mongoose.connect('mongodb://test:test@ds243728.mlab.com:43728/vidjot-bijan-prod');
+mongoose.connect(db.mongoURI);
 
   
 
