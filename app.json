@@ -1,0 +1,5 @@
+{
+  "name": "Vidjot App",
+  "description":  "Login and post your video ideas",
+  "keywords": ["node", "video ideas", "express"]
+}
