@@ -1,0 +1,12 @@
+
+{{#if error}} <!-- passports error --> 
+  <div class="alert alert-danger">{{error}}</div> <!-- display passport error if there is any --> 
+
+{{/if}}
+
+
+{{#each errors}} <!-- our own error --> 
+  <div class="alert alert-danger">{{text}}</div> <!-- error.text being pushed into this view --> 
+{{else}}
+
+{{/each}}
